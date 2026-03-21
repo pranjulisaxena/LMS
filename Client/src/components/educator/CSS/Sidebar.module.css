@@ -1,0 +1,48 @@
+.parentDiv{
+    width: 21vw;
+    border-left: 1px solid rgb(88, 87, 87);
+    border-right: 1px solid rgb(88, 87, 87);
+    height: 100vh;
+    padding: 2vh 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.img{
+    width: 3vw;
+    height: 4vh;
+}
+
+.ItemName{
+    text-align: center;
+}
+
+.SidebarLink{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-items:start;
+    padding: 2vh 2vw;
+    gap: 2vh;
+    text-decoration: none;
+    color: rgb(50, 50, 50);
+    background-color: rgba(146, 165, 254, 0.402);
+    border-right: 6px solid rgb(129, 92, 251);
+}
+.SidebarLink2{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-items:start;
+    padding: 2vh 2vw;
+    gap: 2vh;
+    text-decoration: none;
+    color: rgb(50, 50, 50);
+    border-right: 6px solid white;
+}
+
+.SidebarLink2:hover{
+    border-color: rgb(239, 239, 239);
+    background-color: rgb(239, 239, 239);
+}
+

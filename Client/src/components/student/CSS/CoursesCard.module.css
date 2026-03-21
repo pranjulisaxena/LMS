@@ -1,0 +1,48 @@
+.Link{
+    border: 1px solid #9a9898;
+    padding-bottom: 4vh;
+    overflow: hidden;
+    border-radius: 0.7vw;
+    text-decoration: none;
+    color: black;
+}
+
+.image{
+    width: 100%;
+}
+
+.container{
+    padding: 3vh 1.2vw;
+    text-align: left;
+}
+
+.container h3{
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    font-size: 1.2vw;
+}
+.educator{
+   color: gray;
+    font-size: 1.1vw;
+}
+
+.starsContainer{
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+
+}
+
+.stars{
+    display: flex;;
+}
+
+.stars img{
+    width: 1.5vh;
+    height: 1.5vh;
+}
+
+.price{
+    font-weight: 600;
+    color: rgb(49, 48, 48);
+}

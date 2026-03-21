@@ -1,0 +1,103 @@
+.navbar{
+    background: linear-gradient(to left, #ABB6EC,#A7D6ED ) ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh 6vw;
+    border-bottom: 0.1vh solid rgb(118, 117, 117);
+    height: 15%;
+}
+
+
+.userSignIn{
+    display: flex;
+}
+
+.logo{
+    margin-left: 3.5vw;
+    width: 360px;
+    height:50px;
+    cursor: pointer;
+}
+
+.button{
+    background-color: #2563EB;
+    border: none;
+    color: white;
+    padding: 2vh 1.5vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2vw;
+    margin: 2vh 0;
+    cursor: pointer;
+    border-radius: 6vw;
+    outline: none;
+    margin-right: 4vw;
+}
+
+.button:hover{
+    background-color: #1D4ED8;
+}
+
+.userButton{
+    background-color: transparent;
+    border: none;
+    color: #2563EB;
+    padding: 2vh 1.5vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5vw;
+    margin: 2vh 3vw;
+    cursor: pointer;
+    display: none;
+}
+
+.courseListNavbar{
+    background: white;
+}
+
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5vw;
+    
+}
+
+.login div{
+     color : rgb(102, 102, 102);
+    font-size: 1.2vw;
+}
+
+.login :first-child{
+    cursor: pointer;
+}
+
+.link{
+    color : rgb(102, 102, 102);
+    text-decoration: none;
+    margin-right: 1.2vw;
+}
+
+@media (max-width: 660px) {
+    .logo {
+        width: 200px;
+        height: 50px;
+        margin-left: 0;
+    }
+    .button {
+        display: none;
+    }
+    .userButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 5vw;
+        gap: 2vw;
+    }
+    .login{
+        gap: 0.8vw;
+    }
+}

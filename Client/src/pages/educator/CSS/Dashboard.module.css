@@ -1,0 +1,119 @@
+.parentDiv{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    gap: 2vw;
+    padding: 6vh 4vw;
+    padding-bottom: 0vh;
+}
+
+.FlexDiv{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5vw;
+}
+
+.componentDiv{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    box-shadow: 2px 1px 6px rgba(0, 0, 0, 0.562);
+    border: 1px solid royalblue;
+    padding: 3vh 1vw;
+    width: 18vw;
+    border-radius: 2vh;
+}
+
+.p1{
+    font-size: 2vw;
+    font-weight: 500;
+    color: rgb(77, 76, 76);
+}
+
+.p2{
+    font-size: 1.2vw;
+    color: rgb(102, 102, 102);
+}
+
+
+.inputDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 45vw;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 1vh;
+    background-color: white;
+    border-left: 1px solid rgb(116, 116, 116);
+    border-right: 1px solid rgb(116, 116, 116);
+    border-top: 1px solid rgb(116, 116, 116);
+}
+
+.table{
+    table-layout:auto;
+    width: 100%;
+    overflow: hidden;
+    border-collapse: collapse;
+}
+
+.thead{
+    color: rgb(54, 54, 54);
+    border-bottom: 1px solid rgb(118, 118, 118);
+    font-size: 1vw;
+    text-align: left;
+}
+
+.th1{
+    padding: 2vh 2vw;
+    font-weight: 600;
+    align-items: center;
+    display: table-cell; 
+}
+
+.th2{
+    padding: 2vh 2vw;
+    font-weight: 600;
+}
+
+.tbody{
+    color: rgb(100, 99, 99);
+    font-size: 1.2vw;
+}
+.tr{
+    border-bottom: 1px solid rgb(135, 134, 134);
+}
+.td1{
+    padding: 2vh 2vw;
+    text-align: center;
+    display: table-cell;
+}
+
+.td2{
+    padding: 2vh 2vw;
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+
+.img{
+    width: vw;
+    height: 6vh;
+    border-radius: 100%;
+}
+
+.span{
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+}
+
+.tdTitle{
+padding: 2vh 2vw;
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+}

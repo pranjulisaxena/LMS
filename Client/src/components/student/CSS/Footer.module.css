@@ -1,0 +1,121 @@
+.footer{
+    background-color: #111827;
+    text-align: left;
+    width: 100%;
+    margin-top: 9vh;
+    padding: 0 10vw;
+}
+
+.parentContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    gap: 8vw;
+    padding: 7vh 0vw;
+    border-bottom: 1px solid #ffffffdd;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+}
+
+.hiddenContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+}
+
+.hiddenContainer h2{
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 3vh;
+    font-size: 1.4vw;
+}
+
+.hiddenContainer p{
+    font-size: 1vw;
+      color: #ffffffdd;
+}
+
+.hiddenContainer div{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    padding-top: 3vh;
+}
+
+.hiddenContainer input{
+    border: 1px solid gray;
+    background-color: rgba(69, 69, 69, 0.423);
+    color: gray;
+    outline: none;
+    width: 20vw;
+    height: 8vh;
+    border-radius: 0.5vw;
+    padding: 0 1vw;
+    font-size: 1.2vw;
+}
+
+.hiddenContainer input::placeholder{
+    color: gray;
+}
+
+.hiddenContainer button{
+    background-color:#326AF5;
+    width: 8vw;
+    height: 8vh;
+    color: #fff;
+    border-radius: 1vh;
+    border: none;
+    font-size: 1.2vw;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.text{
+    margin-top: 5vh;
+    align-items: center;
+    text-align: left;
+    font-size: 1.2vw;
+    color: #ffffffdd;
+}
+
+.copyright{
+    padding: 2vh 0;
+    text-align: center;
+    font-size: 1vw;
+    color: #ffffffdd;
+
+}
+
+.h2{
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 3vh;
+}
+
+.ul{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 1.2vw;
+    color: #fff;
+    list-style: none;
+    gap: 1vh;
+}
+.ul li a{
+    color: #ffffffdd;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .hiddenContainer{
+        display: none;
+    }
+}

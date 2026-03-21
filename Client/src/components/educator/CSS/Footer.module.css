@@ -1,0 +1,40 @@
+.Footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    width: 100%;
+    padding: 0 4vw;
+    border-top: 1px solid rgba(0, 0, 0, 0.49);
+}
+
+.img{
+    width: 12vw;
+}
+
+.div{
+    height: 4vh;
+    width: 1px;
+    background-color: rgb(91, 90, 90);
+}
+
+.p{
+    padding: 2vh 0;
+    text-align: center;
+    font-size: 1.5vw;
+    color: rgb(80, 80, 80);
+}
+
+.LeftDiv{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+
+.RightDiv{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    margin-top: 2vh;
+}

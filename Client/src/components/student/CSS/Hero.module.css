@@ -1,0 +1,48 @@
+
+
+.div{
+    background-image: url('../../../assets/HeroImage2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 88vh;
+}
+
+
+
+.container h2{
+    font-size: 4vw;
+    margin-bottom: 3vh;
+    font-weight: 800;
+    color: black;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.container{
+    margin-top: 10vh;
+    margin-left: 4vw;
+    width: 30vw;
+    word-wrap: normal;
+    margin-left: 6vw;
+}
+
+@media screen and (max-width: 740px) {
+.div{
+    height: 50vh;
+}
+.container{
+    width: 30vw;
+    margin-left: 5vw;
+}
+.container h2{
+    font-size: 3.5vw;
+    margin-bottom: 2vh;
+}
+
+}
+
+@media screen and (max-width: 461px) {
+    .div{
+        height: 40vh;
+    }
+}

@@ -1,0 +1,190 @@
+.parentDiv{
+    height: 100vh;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    padding: 4vh 3vw;
+    padding-bottom: 0;
+}
+
+.parentDiv::-webkit-scrollbar{
+    display: none;
+}
+
+.form{
+display: flex;
+flex-direction: column;
+gap: 3vw;
+max-width: 30vw;
+width: 100%;
+ color: rgb(117, 117, 117);
+}
+
+.formParentDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.CourseTitleInput{
+outline: none;
+padding: 3vh 0;
+border-radius: 0.5vh;
+border: 1px solid rgb(156, 156, 156);
+}
+
+.CoursePriceInput{
+    outline: none;
+    padding: 3vh 2vw;
+    width: 10vw;
+    border-radius: 0.5vh;
+    border: 1px solid rgb(170, 169, 169);
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.firstColumn{
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.secondColumn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw;
+}
+
+.fileUpload{
+    padding: 2vh 2vw;
+    background-color: royalblue;
+    border-radius: 0.5vh;
+    cursor: pointer;
+}
+
+.discountInput{
+    outline: none;
+    padding: 2vh 2vw;
+    border-radius: 0.5vh;
+    border: 1px solid rgb(146, 146, 146);
+}
+
+.chapterParentDiv{
+    background-color: white;
+    border: 1px solid black;
+}
+
+.MinChapterDiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh 1.5vw;
+    border-bottom: 1px solid black;
+}
+
+.Collapsed{
+    margin-right: 2vw;
+    cursor: pointer;
+    transition: all;
+}
+.notCollapsed{
+    margin-right: 2vw;
+    cursor: pointer;
+    transition: all;
+    rotate: -90deg;
+}
+
+.lecture{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2vh;
+}
+
+.AddLecture{
+    display: inline-flex;
+    background-color: rgb(192, 191, 191);
+    padding: 1vh 1vw;
+    border-radius: 0.5vh;
+    cursor: pointer;
+    margin-top: 2vh;
+}
+
+.BottomAddChapter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(175, 210, 252);
+    padding: 1.5vh 1vw;
+    border-radius: 0.5vh;
+    cursor: pointer;
+    margin-top: 3vh;
+}
+
+.PopupContainer{
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(73, 72, 72, 0.5);
+}
+
+.Popup{
+    background-color: white;
+    color: rgb(98, 98, 98);
+    padding: 2vh 2vw;
+    border-radius: 0.5vh;
+    position: relative;
+    width: 100%;
+    max-width: 25vw;
+}
+
+.LectureTitleInput{
+    margin-top: 1vh;
+    display: block;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 0.5vh;
+    padding: 1vh 1vw;
+}
+
+.checkbox{
+    margin-top: 1vh;
+    transform: scale(1.25);
+}
+
+.AddButton{
+    width: 100%;
+    background-color: rgba(99, 137, 251, 0.777);
+    color: white;
+    padding: 2vh 2vw;
+    border-radius: 0.7vh;
+}
+
+.Crossimg{
+    position: absolute;
+    top: 2vh;
+    right: 1.6vw;
+    width: 1vw;
+    cursor: pointer;
+}
+
+.SubmitBtn{
+    background-color: black;
+    color: white;
+    max-width: 8vw;
+    padding: 2vh 2vw;
+    border-radius: 0.5vh;
+    margin: 3vh 0;
+    text-align: center;
+    cursor: pointer;
+}

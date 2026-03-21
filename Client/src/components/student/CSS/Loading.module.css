@@ -1,0 +1,24 @@
+.div1{
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.div2{
+    width: 6vw;
+    aspect-ratio: 1 / 1;
+    border: 5px solid rgb(124, 123, 123);
+    border-top: 5px solid royalblue;
+    border-radius: 100%;
+    animation: spin 1s linear infinite ;
+
+}
+
+@keyframes spin {
+    0%{
+      rotate: 0deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}

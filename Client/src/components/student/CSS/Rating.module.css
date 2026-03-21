@@ -1,0 +1,12 @@
+.span{
+    font-size: 2vw;
+    cursor: pointer;
+    transition: all color-related properties 0.3s ease;
+    color: rgb(255, 179, 0);
+}
+.span2{
+    font-size: 2vw;
+    cursor: pointer;
+    transition: all color-related properties 0.3s ease;
+    color: gray;
+}

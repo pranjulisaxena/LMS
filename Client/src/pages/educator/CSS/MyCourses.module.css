@@ -1,0 +1,85 @@
+.parentDiv{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    padding: 4vh 3vw;
+    padding-bottom: 0;
+    scrollbar-width: 1vw;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+}
+
+.parentDiv::-webkit-scrollbar {
+  display: none;
+}
+
+.h1{
+    padding-bottom: 3vh;
+    font-size: 1.4vw;
+    font-weight: 600;
+}
+
+.thead{
+    color: rgb(62, 62, 62);
+    border-bottom: 1px solid rgb(132, 131, 131);
+    font-size: 1vw;
+    text-align: left;
+}
+
+.th{
+    padding: 2vh 3vw;
+    font-weight: 600;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.tableDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 60vw;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 1vh;
+    background-color: white;
+    border: 1px solid rgb(167, 165, 165);
+
+}
+
+.table{
+    table-layout: auto;
+    width: 100%;
+    overflow: hidden;
+    border-collapse: collapse;
+}
+
+.thead{
+    color: rgb(60, 60, 60);
+    border-bottom: 1px solid rgb(177, 176, 176);
+    font-size: 1.2vw;
+    text-align: left;
+}
+
+.tr{
+    border-bottom: 1px solid rgb(175, 175, 175);
+}
+
+.td1{
+    padding: 2vh 2vw;
+    display: flex;
+    align-items: center;
+    row-gap: 2vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.span{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;   
+    margin-left: 1vw;
+}

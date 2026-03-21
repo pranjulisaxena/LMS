@@ -1,0 +1,289 @@
+.parent{
+    background: linear-gradient(to right, #DDFBFE, white);
+    display: flex;
+    flex-direction: row;
+    gap: 4vw;
+    position: relative;
+    align-items: start;
+    justify-content: space-between;
+    padding: 4vw 8vw;
+    text-align: left;
+}
+
+.section{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    background-color: gray;
+    
+}
+
+.leftParent{
+    max-width: 38vw;
+    z-index: 10;
+    color: gray;
+}
+
+.leftParent h1{
+    font-size: 2.6vw;
+    font-weight: 700;
+    color: rgb(53, 52, 52);
+}
+
+
+.leftParentP{
+    padding: 2vh 0;
+    font-size: 1.1vw
+}
+
+.educator{
+    color: rgb(55, 145, 247);
+    font-size: 1.1vw;
+}
+
+.starsContainer{
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    padding-top: 2vh;
+    padding-bottom: 1vh;
+
+}
+
+.stars{
+    display: flex;;
+}
+.instructor{
+   color: rgb(55, 145, 247);
+    text-decoration: underline;
+}
+
+.chaptersParent{
+    padding-top: 6vh;
+    color: rgb(50, 50, 50);
+    font-size: 1vw;
+}
+
+.chaptersParent h2{
+    font-size: 2.5vw;
+    font-weight: 600;
+    margin-bottom: 4vh;
+}
+
+.contentBorder{
+    border: 1px solid rgba(165, 164, 164, 0.679);
+    background-color: white;
+    margin-bottom: 1vh;
+    border-radius: 1vh;
+}
+
+.contentFix{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vh 1.5vw;
+    cursor: pointer;
+    user-select: none;
+}
+
+.div3{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+
+.div3 p{
+    font-weight: 600;
+    font-size: 1vw;
+
+}
+
+.time{
+    font-size: 1vw;
+    font-weight: 600;
+}
+
+.play_icon{
+    height: 3vh;
+    width: 2.2vw;
+}
+
+.motion{
+    overflow: hidden;
+    transition: all;
+    transition-duration: 3ms;
+    max-height: 30vh;
+}
+
+.notmotion{
+    overflow: hidden;
+    transition: all;
+    transition-duration: 3ms;
+    max-height: 0vh; 
+}
+
+.motion ul{
+    list-style-type: disc;
+    padding: 1vw 1.7vw;
+    color: rgb(91, 91, 91);
+    border-top: 0.1vh solid rgba(194, 194, 194, 0.769);
+
+}
+
+.motion li{
+   display: flex;
+   align-items: start;
+   gap: 1vw;
+   padding: 1vh 0; 
+
+}
+
+.listDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    color: rgb(68, 68, 68);
+}
+
+.listDiv2{
+  display: flex;
+  gap: 1.5vw;  
+}
+
+.preview{
+    cursor: pointer;
+    color: royalblue;
+}
+
+.rotate180{
+    rotate: 180deg;
+}
+.desc{
+    padding-top: 12vh;
+}
+.desc h3{
+    font-size: 1.5vw;
+    font-weight: 600;
+    color: rgb(46, 46, 46);
+}
+.desc p{
+    padding-top: 2vh;
+    font-size: 2.3vh;
+}
+
+.rightColumnParent{
+    z-index: 10;
+    overflow: hidden;
+    background-color: white;
+    min-width: 250px;
+    box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.441);
+    max-width: 450px;
+}
+
+.rightDiv{
+    padding: 0 2vw;
+    padding-top: 3vh;
+    padding-bottom: 2vh;
+}
+
+.Rightimg{
+    width: 1.3vw;
+}
+
+.RightP{
+    color: rgb(220, 67, 20);
+}
+
+.RightP span{
+    font-weight: 600;
+}
+
+.rightDiv2{
+    display: flex;
+    align-items: center;
+    gap: 0.9vw;
+}
+
+.img1{
+    width: 100%;
+    height: 28%;
+}
+
+.currencyDiv{
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+    padding-top: 2vh;
+}
+
+.p1{
+color: rgb(42, 41, 41);
+font-size: 2vw;
+font-weight: 600;
+}
+.p2{
+font-size: 1vw;
+color: rgb(80, 80, 80);
+text-decoration: line-through;
+}
+.p3{
+color: rgb(80, 80, 80);
+font-size: 1vw;
+}
+
+.RightBottomDiv{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    padding-top: 3vh;
+    color: rgb(79, 78, 78);
+
+}
+.RightBottomDiv1{
+    display: flex;
+    align-items: center;
+    gap: 0.4vw;
+}
+
+.RightBottomDiv2{
+    height: 3vh;
+    width: 1px;
+    background-color: rgb(156, 154, 154);
+}
+
+.EnrollBtn{
+    margin-top: 4vh;
+    width: 100%;
+    padding: 2.3vh 0;
+    border-radius: 1vh;
+    background-color: royalblue;
+    color: white;
+    font-weight: 600;
+    border: none;
+}
+
+.AboutCourseContainer{
+padding-top: 4vh;
+}
+
+.AboutCourseContainer p{
+font-size: 1.3vw;
+font-weight: 500;
+color: rgb(74, 74, 74);
+}
+
+.AboutCourseContainer ul{
+    margin-left: 2vw;
+    padding-top: 2vh;
+    list-style-type: disc;
+    color: gray;
+    font-size: 1.1vw;
+}
+
+.iframeClass{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}

@@ -1,0 +1,103 @@
+.div{
+    padding: 8vh 10vw;
+}
+
+.div h2{
+    font-size: 3.5vw;
+    font-weight: 600;
+    color: rgb(29, 29, 29);
+    text-align: center;
+}
+.divP{
+    text-align: center;
+    color: gray;
+    margin-top: 3vh;
+    font-size: 1.6vw;
+}
+
+.star{
+    height: 2.5vh;
+}
+
+.feedback{
+    margin-top: 3vh;
+    font-size: 1vw;
+    color: rgb(94, 92, 92);
+}
+
+.starContainer{
+    display: flex;
+    gap: 0.5vw;
+}
+
+.starContainer2{
+    padding: 2vh 2vw;
+    padding-bottom: 1vw;
+}
+
+.role{
+    color: rgb(104, 104, 104);
+    font-size: 1vw;
+    margin-top: 0.5vh;
+}
+
+.h1{
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: rgb(29, 29, 29);
+}
+
+.img{
+    height: 10vh;
+    width: 10vh;
+    border-radius: 50%;
+}
+
+.parentContainer{
+    font-size: 1.2vw;
+    text-align: left;
+    border: 1px solid gray;
+    padding-bottom: 3vw;
+    border-radius: 1vw;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: outset 12px 12px 15px rgba(0, 0, 0, 0.886);
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    padding: 2vh 2vw;
+    background-color: rgba(224, 223, 223, 0.696);
+
+}
+
+.CardContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3vw;
+    margin-top: 8vh;
+    padding: 0 1vw;
+}
+
+.readMore{
+    color: rgb(71, 91, 244);
+    text-decoration: underline;
+    padding: 0 2vw;
+}
+
+@media screen and (max-width: 750px) {
+    .CardContainer{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 430px) {
+    .CardContainer{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3vh;
+    }
+    .div{
+    padding: 8vh 14vw;
+}
+}

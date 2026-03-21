@@ -1,0 +1,42 @@
+.companiesContainer{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+.companiesContainer p{
+    color: gray;
+    text-align: center;
+}
+
+.companiesContainer img{
+    width: 10vw;
+    height: 6vh;
+}
+
+.companiesLogoContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2vw;
+    margin-top: 5vh;
+}
+
+@media screen and (max-width: 600px) {
+    .companiesContainer{
+    padding-top: 5vh;
+    padding-bottom: 0;
+}
+
+.companiesLogoContainer{
+       margin-top: 3vh;
+}
+
+    
+}
+
+@media screen and (max-width: 440px) {
+    .companiesContainer p{
+        font-size: 3vw;
+    }
+}

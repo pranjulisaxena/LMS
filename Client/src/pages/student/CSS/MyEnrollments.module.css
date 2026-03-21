@@ -1,0 +1,96 @@
+.th{
+    padding: 2vh 2vw;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.parentDiv{
+    padding: 0 10vw;
+    padding-top: 5vh;
+    font-size: 1vw;
+}
+
+.parentDiv table{
+    table-layout: auto;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid rgba(99, 99, 99, 0.679);
+    margin-top: 4vh;
+    border-collapse: collapse
+}
+
+.parentDiv h1{
+    font-size: 2vw;
+    font-weight: 600;
+}
+
+.parentDiv thead{
+ color: rgb(47, 47, 47);   
+ border-bottom: 1px solid rgb(163, 161, 161);
+ font-size: 1vw;
+ text-align: left;
+
+}
+
+.parentDiv tbody img{
+    width: 6vw;
+    height: 7vh;
+    object-fit: contain;
+}
+
+.parentDiv tbody{
+    color: rgb(86, 86, 86);
+}
+
+.tr{
+    border-bottom: 1px solid rgb(185, 185, 185);
+}
+
+.td1{
+    padding: 3vh 1.5vw;
+    padding-left: 1vw;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    
+}
+
+.td1 div{
+    flex: 1;
+}
+
+.td1 div p{
+    margin-bottom: 1vh;
+
+}
+
+.td2{
+    padding: 2vh 2vw;
+}
+.td3{
+    padding: 2vh 2vw;
+}
+.td4{
+    padding: 2vh 2vw;
+}
+
+.td4 button{
+    padding: 1.5vh 1.8vw;
+    background-color: royalblue;
+    color: white;
+    border: none;
+    border-radius: 0.5vw;
+    cursor: pointer;
+}
+
+.td4 button:hover{
+    background-color:rgb(17, 117, 217);
+}
+
+
+.LineProgress{
+background-color: gray;
+border-radius: 6vh;
+}
