@@ -3,6 +3,7 @@ import cors from 'cors'
 import 'dotenv/config'
 import connectDB from './configs/mongodb.js'
 import { clerkWebhooks } from './controllers/webhooks.js'
+import { clerkMiddleware } from '@clerk/express'
 
 
 // Initialize Express
@@ -14,6 +15,7 @@ await connectDB()
 
 // Middlewares
 app.use(cors())
+app.use(clerkMiddleware())
 
 
 // Routes
