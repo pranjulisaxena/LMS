@@ -13,6 +13,7 @@ try {
         "svix-signature": req.headers["svix-signature"]
     })
     const {data, type} = req.body
+    console.log(data, type);
 
     switch (type) {
         case 'user.created': {
