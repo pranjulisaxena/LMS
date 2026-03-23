@@ -32,7 +32,6 @@ app.post('/clerk', (req, res) => {
     console.log(req.body);
     console.log('something happened');
     res.send("clerk hit");
-
 })
 
 // Port
