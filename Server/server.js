@@ -28,7 +28,7 @@ app.get('/', (req, res) =>{
 //     console.log(req.body);
 //     res.send("Received");
 // })
-app.post('/clerk', (req, res) => {
+app.get('/clerk', (req, res) => {
     console.log(req.body);
     console.log('something happened');
     res.send("clerk hit");
