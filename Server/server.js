@@ -4,6 +4,7 @@ import 'dotenv/config'
 import connectDB from './configs/mongodb.js'
 import { clerkWebhooks } from './controllers/webhooks.js'
 import { clerkMiddleware } from '@clerk/express'
+import {Webhook} from 'svix'
 
 
 // Initialize Express
@@ -29,7 +30,9 @@ app.get('/', (req, res) =>{
 //     res.send("Received");
 // })
 app.post('/clerk', (req, res) => {
-    console.log(req.body);
+    const whook = new Webhook(process.env.CLERK_WEBHOOK_SECRET);
+    console.log(whook);
+    // console.log(req.body);
     console.log('something happened');
     res.send("clerk hit");
 })
