@@ -16,6 +16,7 @@ await connectDB()
 // Middlewares
 app.use(cors())
 app.use(clerkMiddleware())
+app.use(express.json());
 
 
 // Routes
@@ -23,7 +24,16 @@ app.use(clerkMiddleware())
 app.get('/', (req, res) =>{
     res.send('API is Working')
 })
-app.post('/clerk', express.json(), clerkWebhooks)
+// app.post('/api/user', (req, res) => {
+//     console.log(req.body);
+//     res.send("Received");
+// })
+app.post('/clerk', (req, res) => {
+    console.log(req.body);
+    console.log('something happened');
+    res.send("clerk hit");
+
+})
 
 // Port
 const PORT = process.env.PORT || 5000
