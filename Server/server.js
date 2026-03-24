@@ -24,7 +24,7 @@ app.use(clerkMiddleware())
 
 // Routes
 
-app.post('/stripe', express.raw({type: 'application/json'}), stripeWebhooks)
+// app.post('/stripe', express.raw({type: 'application/json'}), stripeWebhooks)
 app.get('/', (req, res) =>{
     res.send('API is Working')
 })
