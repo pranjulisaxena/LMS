@@ -6,6 +6,7 @@ import User from '../models/User.js'
 
 export const clerkWebhooks = async (req, res) =>{
 try {
+    console.log("Clerk Webhook Hit")
     const whook = new Webhook(process.env.CLERK_WEBHOOK_SECRET)
     await whook.verify(JSON.stringify(req.body), {
         "svix-id": req.headers["svix-id"],
@@ -17,6 +18,7 @@ try {
 
     switch (type) {
         case 'user.created': {
+            console.log("user created event")
             const userData = {
                 _id: data.id,
                 email: data.email_addresses[0].email_address,
