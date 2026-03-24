@@ -52,7 +52,7 @@ app.post('/api/user',express.json(), async (req, res) => {
 app.use('/api/educator',express.json(), educatorRouter)
 app.use('/api/course', express.json(), courseRouter)
 app.use('/api/user', express.json(), userRouter)
-app.post('/stripe', express.raw({type: 'application/json'}), stripeWebhooks )
+app.post('/api/stripe', express.raw({type: 'application/json'}), stripeWebhooks )
 // Port
 const PORT = process.env.PORT || 5000
 
