@@ -1,6 +1,6 @@
 import Stripe from "stripe"
-import Course from "../models/Course";
-import User from "../models/User";
+import Course from "../models/Course.js";
+import User from "../models/User.js";
 
 
 const stripeInstance = new Stripe(process.env.STRIPE_SECRET_KEY)
