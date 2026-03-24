@@ -25,7 +25,7 @@ export const stripeWebhooks = async (request, response) =>{
         const paymentIntent = event.data.object;
         const paymentIntentId = paymentIntent.id;
 
-        const session = await stripeInstance.checkout.sessions.list({
+        const session = await stripeInstance.checkout.sessions.list({ 
           payment_intent: paymentIntentId
         })
 
@@ -38,8 +38,8 @@ export const stripeWebhooks = async (request, response) =>{
         courseData.enrolledStudents.push(userData)
         await courseData.save()
         
-        // userData.enrolledStudents.push(courseData._id)
-        // await userData.save()
+        userData.enrolledStudents.push(courseData._id)
+        await userData.save()
 
         purchaseData.status = 'completed'
         await purchaseData.save()

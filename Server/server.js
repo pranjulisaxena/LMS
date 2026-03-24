@@ -33,16 +33,21 @@ app.get('/', (req, res) =>{
 })
 app.post('/api/user',express.json(), async (req, res) => {
     // console.log(req.body);
+    const user = User.findById(req.body.clerkId);
+
+    if(user){
+        return res.send("ok");
+    }
+    else{
     const userData = {
-                    _id: req.body.clerkId,
-                    email: req.body.email,
-                    name: req.body.name,
-                    imageUrl: req.body.imageUrl, 
-                }
-    
-                await User.create(userData)
-                // console.log(userData);
-                res.send("Received");  
+            _id: req.body.clerkId,
+            email: req.body.email,
+            name: req.body.name,
+            imageUrl: req.body.imageUrl, 
+        }
+    await User.create(userData)
+    }
+    res.send("Received");  
 })
 app.use('/api/educator',express.json(), educatorRouter)
 app.use('/api/course', express.json(), courseRouter)

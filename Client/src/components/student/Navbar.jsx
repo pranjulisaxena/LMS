@@ -19,8 +19,7 @@ const Navbar = () => {
   const { user, isLoaded } = useUser();
   // console.log(user);
 
-useEffect(() => {
-  const saveUser = async() => {
+    const saveUser = async() => {
     try {
       await axios.post('http://localhost:5000/api/user',{
         clerkId: user.id,
@@ -33,6 +32,7 @@ useEffect(() => {
     }
   }
 
+useEffect(() => {
   if(isLoaded && user){
   saveUser();
   }
