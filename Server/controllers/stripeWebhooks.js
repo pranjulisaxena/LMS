@@ -22,6 +22,7 @@ export const stripeWebhooks = async (request, response) =>{
     // Handle the event
   switch (event.type) {
     case 'payment_intent.succeeded':{
+        console.log("Event : ", event.type);
         const paymentIntent = event.data.object;
         const paymentIntentId = paymentIntent.id;
 
@@ -31,10 +32,14 @@ export const stripeWebhooks = async (request, response) =>{
 
         const { purchaseId } = session.data[0].metadata;
 
+        console.log("purchaseId: ", purchaseId);
+
         const purchaseData = await Purchase.findById(purchaseId)
         const userData = await User.findById(purchaseData.userId)
         const courseData = await Course.findById(purchaseData.courseId.toString())
-
+        console.log("userData: ",userData)
+        console.log("courseData: ",courseData)
+        console.log("courseData: ",courseData._id)
         courseData.enrolledStudents.push(userData)
         await courseData.save()
         
