@@ -7,6 +7,7 @@ import { Purchase } from "../models/Purchase.js";
 const stripeInstance = new Stripe(process.env.STRIPE_SECRET_KEY)
 
 export const stripeWebhooks = async (request, response) =>{
+  console.log('something happened')
       const sig = request.headers['stripe-signature'];
 
   let event;
@@ -15,7 +16,7 @@ export const stripeWebhooks = async (request, response) =>{
     event = Stripe.webhooks.constructEvent(request.body, sig, process.env.STRIPE_WEBHOOK_SECRET);
   }
   catch (err) {
-    response.status(400).send(`Webhook Error: ${err.message}`);
+    return response.status(400).send(`Webhook Error: ${err.message}`);
   }
 
     // Handle the event
