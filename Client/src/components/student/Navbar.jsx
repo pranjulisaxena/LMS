@@ -17,26 +17,26 @@ const Navbar = () => {
 
   const { openSignIn } = useClerk();
   const { user, isLoaded } = useUser();
-  console.log(user);
+  // console.log(user);
 
-// useEffect(() => {
-//   const saveUser = async() => {
-//     try {
-//       await axios.post('http://localhost:5000/api/user',{
-//         clerkId: user.id,
-//         email: user.primaryEmailAddress.emailAddress,
-//         name: user.fullName,
-//         imageUrl: user.imageUrl,
-//       })
-//     } catch (error) {
-//       console.error('Error saving user:', error);
-//     }
-//   }
+useEffect(() => {
+  const saveUser = async() => {
+    try {
+      await axios.post('http://localhost:5000/api/user',{
+        clerkId: user.id,
+        email: user.primaryEmailAddress.emailAddress,
+        name: user.fullName,
+        imageUrl: user.imageUrl,
+      })
+    } catch (error) {
+      console.error('Error saving user:', error);
+    }
+  }
 
-//   if(isLoaded && user){
-//   saveUser();
-//   }
-// }, [isLoaded, user]);
+  if(isLoaded && user){
+  saveUser();
+  }
+}, [isLoaded, user]);
 
   return (
     <div className={`${styles.navbar} ${isCourseListPage ? styles.courseListNavbar : ''}`}>
