@@ -1,6 +1,7 @@
 import Stripe from "stripe"
 import Course from "../models/Course.js";
 import User from "../models/User.js";
+import { Purchase } from "../models/Purchase.js";
 
 
 const stripeInstance = new Stripe(process.env.STRIPE_SECRET_KEY)
@@ -29,7 +30,7 @@ export const stripeWebhooks = async (request, response) =>{
 
         const { purchaseId } = session.data[0].metadata;
 
-        const purchaseData = await purchaseId.findById(purchaseId)
+        const purchaseData = await Purchase.findById(purchaseId)
         const userData = await User.findById(purchaseData.userId)
         const courseData = await Course.findById(purchaseData.courseId.toString())
 
@@ -54,7 +55,7 @@ export const stripeWebhooks = async (request, response) =>{
         })
 
         const { purchaseId } = session.data[0].metadata;
-        const purchaseData = await purchaseId.findById(purchaseId)
+        const purchaseData = await Purchase.findById(purchaseId)
         purchaseData.status = 'failed'
         await purchaseData.save()
 
