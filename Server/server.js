@@ -11,7 +11,6 @@ import courseRouter from './routes/courseRoute.js'
 import userRouter from './routes/userRoutes.js'
 import { stripeWebhooks } from './controllers/stripeWebhooks.js'
 
-
 // Initialize Express
 const app = express()
 
@@ -47,11 +46,10 @@ app.post('/api/user',express.json(), async (req, res) => {
     }
     res.send("Received");  
 })
-app.post('/clerk', express.json(), clerkWebhooks)
 app.use('/api/educator',express.json(), educatorRouter)
 app.use('/api/course', express.json(), courseRouter)
 app.use('/api/user', express.json(), userRouter)
-
+// app.post('/stripe', express.raw({type: 'application/json'}), stripeWebhooks )
 
 // Port
 const PORT = process.env.PORT || 5000

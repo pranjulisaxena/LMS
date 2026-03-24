@@ -16,7 +16,7 @@ const Navbar = () => {
   const isCourseListPage = location.pathname.includes('/course-list');
 
   const { openSignIn } = useClerk();
-  const { user, isLoaded} = useUser();
+  const { user, isLoaded } = useUser();
   // console.log(user);
 
     const saveUser = async() => {
