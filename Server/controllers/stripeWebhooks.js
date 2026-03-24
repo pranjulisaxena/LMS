@@ -8,7 +8,7 @@ const stripeInstance = new Stripe(process.env.STRIPE_SECRET_KEY)
 
 export const stripeWebhooks = async (request, response) =>{
   console.log('something happened')
-      const sig = request.headers['stripe-signature'];
+  const sig = request.headers['stripe-signature'];
 
   let event;
 
@@ -38,8 +38,8 @@ export const stripeWebhooks = async (request, response) =>{
         courseData.enrolledStudents.push(userData)
         await courseData.save()
         
-        userData.enrolledStudents.push(courseData._id)
-        await userData.save()
+        // userData.enrolledStudents.push(courseData._id)
+        // await userData.save()
 
         purchaseData.status = 'completed'
         await purchaseData.save()
