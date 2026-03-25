@@ -7,7 +7,7 @@ import User from '../models/User.js'
 export const clerkWebhooks = async (req, res) =>{
 try {
     console.log("Clerk Webhook Hit")
-
+    console.log("SECRET:", process.env.CLERK_WEBHOOK_SECRET);
     const whook = new Webhook(process.env.CLERK_WEBHOOK_SECRET)
     console.log(whook);
 
