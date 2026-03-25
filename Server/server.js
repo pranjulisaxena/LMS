@@ -24,18 +24,13 @@ app.use(clerkMiddleware())
 
 // Routes
 
-// app.post('/stripe', express.raw({type: 'application/json'}), stripeWebhooks)
+app.post('/stripe', express.raw({type: 'application/json'}), stripeWebhooks)
 app.get('/', (req, res) =>{
     res.send('API is Working')
 })
 app.post('/api/user',express.json(), async (req, res) => {
     // console.log(req.body);
-    const user = User.findById(req.body.clerkId);
 
-    if(user){
-        return res.send("ok");
-    }
-    else{
     const userData = {
             _id: req.body.clerkId,
             email: req.body.email,
@@ -43,7 +38,7 @@ app.post('/api/user',express.json(), async (req, res) => {
             imageUrl: req.body.imageUrl, 
         }
     await User.create(userData)
-    }
+
     res.send("Received");  
 })
 app.use('/api/educator',express.json(), educatorRouter)
