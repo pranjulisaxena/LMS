@@ -11,13 +11,15 @@ try {
     const whook = new Webhook(process.env.CLERK_WEBHOOK_SECRET)
     console.log(whook);
 
-    await whook.verify(JSON.stringify(req.body), {
+    const payload = req.body.toString();
+
+    await whook.verify(payload, {
         "svix-id": req.headers["svix-id"],
         "svix-timestamp": req.headers["svix-timestamp"],
         "svix-signature": req.headers["svix-signature"]
     })
-    const {data, type} = req.body
-    console.log(data, type);
+    const { data, type } = JSON.parse(payload);
+    console.log("data : ", data, "\ntype : ", type);
 
     switch (type) {
         case 'user.created': {
