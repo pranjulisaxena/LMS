@@ -7,9 +7,8 @@ import User from '../models/User.js'
 export const clerkWebhooks = async (req, res) =>{
 try {
     console.log("Clerk Webhook Hit")
-    console.log("SECRET:", process.env.CLERK_WEBHOOK_SECRET);
+
     const whook = new Webhook(process.env.CLERK_WEBHOOK_SECRET)
-    console.log(whook);
 
     const payload = req.body.toString();
 
@@ -19,11 +18,11 @@ try {
         "svix-signature": req.headers["svix-signature"]
     })
     const { data, type } = JSON.parse(payload);
-    console.log("data : ", data, "\ntype : ", type);
+    // console.log("data : ", data, "\ntype : ", type);
 
     switch (type) {
         case 'user.created': {
-            console.log("user created event")
+            // console.log("user created event")
             const userData = {
                 _id: data.id,
                 email: data.email_addresses[0].email_address,
