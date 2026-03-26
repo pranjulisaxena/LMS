@@ -263,6 +263,7 @@ font-size: 1vw;
     color: white;
     font-weight: 600;
     border: none;
+    cursor: pointer;
 }
 
 .AboutCourseContainer{

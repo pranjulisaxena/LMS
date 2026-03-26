@@ -1,17 +1,34 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { dummyStudentEnrolled } from '../../assets/assets'
 import Loading from '../../components/student/Loading'
 import style from '../educator/CSS/StudentsEnrolled.module.css'
+import { AppContext } from '../../context/AppContext'
+import axios from 'axios'
+import { toast } from 'react-toastify'
 const StudentsEnrolled = () => {
+  const {backendUrl, getToken, isEducator } = useContext(AppContext)
   const [enrolledStudents, setEnrolledStudents] = useState(null)
 
   const fetchEnrolledStudents = async () =>{
-    setEnrolledStudents(dummyStudentEnrolled)
+    try {
+      const token = await getToken()
+      const {data} = await axios.get(backendUrl + '/api/educator/enrolled-students', {headers: {Authorization: `Bearer ${token}`}})
+      if(data.success){
+        setEnrolledStudents(data.enrolledStudents.reverse())
+      }
+      else{
+        toast.error(data.message)
+      }
+    } catch (error) {
+      toast.error(error.message)
+    }
   }
 
   useEffect(() =>{
-    fetchEnrolledStudents()
-  }, [])
+    if(isEducator){
+  fetchEnrolledStudents()
+    }
+  }, [isEducator])
 
   return  enrolledStudents ?(
     <div className={style.div1}>
@@ -33,7 +50,7 @@ const StudentsEnrolled = () => {
                 </td>
                 <td style={{padding: '3vh 2vw', display: 'flex', alignItems: 'center', rowGap: '2vw'}}>
                   <img src={item.student.imageUrl} alt="" style={{width: '4vw', height: '8vh', borderRadius: '100%'}} />
-                  <span style={{overflow: 'hidden', wordWrap: 'nowrap',textOverflow: 'ellipsis'}}>{item.student.name}</span>
+                  <span style={{overflow: 'hidden', wordWrap: 'nowrap',textOverflow: 'ellipsis', paddingLeft: '1vw'}}>{item.student.name}</span>
                 </td>
                 <td style={{padding: '3vh 2vw',overflow: 'hidden', wordWrap: 'nowrap',textOverflow: 'ellipsis', }}>{item.courseTitle}</td>
                 <td style={{padding: '3vh 2vw', display: 'table-cell'}}>{new Date(item.purchaseDate).toLocaleDateString()}</td>

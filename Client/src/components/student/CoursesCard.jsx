@@ -8,13 +8,14 @@ import styles from './CSS/CoursesCard.module.css'
 const CoursesCard = ({course}) => {
 
   const {currency,calculateRating} = useContext(AppContext)
+  console.log(course);
 
   return (
     <Link to={'/course/'+ course._id} onClick={() => scrollTo(0,0,)} className={styles.Link} >
       <img className={styles.image} src={course.courseThumbnail} alt="" />
       <div className={styles.container}>
         <h3>{course.courseTitle}</h3>
-        <p className={styles.educator}>Alien Dev</p>
+        <p className={styles.educator}>{course.educator.name}</p>
         <div className={styles.starsContainer}>
           <p>{calculateRating(course)}</p>
           <div className={styles.stars}>
