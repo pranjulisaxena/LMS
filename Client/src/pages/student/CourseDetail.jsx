@@ -131,7 +131,7 @@ const CourseDetail = () => {
                             {lecture.isPreviewFree && <p className={style.preview}onClick={() => setplayerData({
                               videoId: lecture.lectureUrl.split('/').pop()
                             })}>Preview</p> }
-                            <p>{humanizeDuration(lecture.lectureDuration * 60 * 1000, {units: ["h", "m"]})}</p>
+                            <p>{humanizeDuration(Number(lecture.lectureDuration) * 60 * 1000, {units: ["h", "m"]})}</p>
                           </div>
                         </div>
                       </li>

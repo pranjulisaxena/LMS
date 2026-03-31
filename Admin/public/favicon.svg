@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Background -->
+  <rect width="32" height="32" rx="6" fill="#1E40AF"/>
+
+  <!-- Graduation cap -->
+  <polygon points="16,7 4,13 16,19 28,13" fill="#FFFFFF"/>
+  <rect x="12" y="19" width="8" height="3" rx="1" fill="#FFFFFF"/>
+
+  <!-- Tassel -->
+  <line x1="20" y1="19" x2="23" y2="24" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="23" cy="24" r="1.5" fill="#FFFFFF"/>
+</svg>

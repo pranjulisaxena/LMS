@@ -1,0 +1,77 @@
+/* Sidebar container */
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  background: linear-gradient(180deg, #1e293b, #0f172a);
+  color: white;
+
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Title */
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* Nav */
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Links */
+.link {
+  text-decoration: none;
+  color: #cbd5f5;
+
+  padding: 10px 14px;
+  border-radius: 8px;
+
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  transition: all 0.25s ease;
+}
+
+/* Hover effect */
+.link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  transform: translateX(5px);
+}
+
+/* Active link */
+.active {
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.4);
+}
+
+.button{
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.button:hover {
+  background: #1d4ed8;
+  box-shadow: 0 4px 10px rgba(29, 78, 216, 0.4);
+}

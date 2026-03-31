@@ -1,0 +1,486 @@
+.container { padding:20px; flex:1; }
+.title { margin-bottom:10px; }
+/* Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+}
+
+/* Card */
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Top Row */
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* User Info */
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Avatar */
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* Name */
+.name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Email */
+.email {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* Role badge */
+.role {
+  font-size: 12px;
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+/* Stats */
+.stats {
+  font-size: 13px;
+  color: #374151;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Buttons */
+.viewBtn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.viewBtn:hover {
+  background: #1d4ed8;
+}
+
+.deleteBtn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.deleteBtn:hover {
+  background: #dc2626;
+}
+
+.userId {
+  font-size: 11px;
+  color: #9ca3af;
+  margin-top: 2px;
+  word-break: break-all;
+}
+
+/* Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.modalHeader h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #6b7280;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeBtn:hover {
+  color: #374151;
+}
+
+.modalBody {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.userDetail {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.userAvatar {
+  width: 60px;
+  height: 40px;
+  border-radius: 100%;
+  background: #2563eb;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.detailSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detailSection h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.detailSection p {
+  margin: 0;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.courseList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.courseItem {
+  padding: 8px 12px;
+  background: #f9fafb;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #374151;
+}
+
+/* Responsive Design */
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+    gap: 12px;
+  }
+
+  .card {
+    padding: 14px;
+    gap: 10px;
+  }
+
+  .topRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .userInfo {
+    gap: 10px;
+  }
+
+  .avatar {
+    width: 38px;
+    height: 38px;
+  }
+
+  .name {
+    font-size: 15px;
+  }
+
+  .email {
+    font-size: 13px;
+  }
+
+  .stats {
+    font-size: 12px;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .viewBtn, .deleteBtn {
+    width: 100%;
+    padding: 8px 12px;
+  }
+
+  /* Modal responsive */
+  .modal {
+    width: 95%;
+    max-width: none;
+    margin: 20px;
+  }
+
+  .modalHeader {
+    padding: 16px;
+  }
+
+  .modalHeader h2 {
+    font-size: 16px;
+  }
+
+  .modalBody {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .userDetail {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .userAvatar {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .detailSection h4 {
+    font-size: 13px;
+  }
+
+  .detailSection p {
+    font-size: 13px;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .title {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .card {
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .userInfo {
+    gap: 8px;
+  }
+
+  .avatar {
+    width: 35px;
+    height: 35px;
+  }
+
+  .name {
+    font-size: 14px;
+  }
+
+  .email {
+    font-size: 12px;
+  }
+
+  .userId {
+    font-size: 10px;
+  }
+
+  .role {
+    font-size: 11px;
+    padding: 3px 6px;
+  }
+
+  .stats {
+    font-size: 11px;
+    gap: 12px;
+  }
+
+  .footer {
+    gap: 6px;
+  }
+
+  .viewBtn, .deleteBtn {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+
+  /* Modal responsive for mobile */
+  .modal {
+    width: 98%;
+    margin: 10px;
+    max-height: 90vh;
+  }
+
+  .modalHeader {
+    padding: 12px 16px;
+  }
+
+  .modalHeader h2 {
+    font-size: 15px;
+  }
+
+  .closeBtn {
+    font-size: 20px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .modalBody {
+    padding: 12px 16px;
+    gap: 14px;
+  }
+
+  .userDetail {
+    gap: 10px;
+  }
+
+  .userAvatar {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  .userInfo h3 {
+    font-size: 16px;
+  }
+
+  .userInfo p {
+    font-size: 13px;
+  }
+
+  .detailSection {
+    gap: 6px;
+  }
+
+  .detailSection h4 {
+    font-size: 12px;
+  }
+
+  .detailSection p {
+    font-size: 12px;
+  }
+
+  .courseList {
+    gap: 4px;
+  }
+
+  .courseItem {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 360px) {
+  .container {
+    padding: 8px;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  .modal {
+    width: 100%;
+    margin: 5px;
+    border-radius: 8px;
+  }
+
+  .modalHeader {
+    padding: 10px 12px;
+  }
+
+  .modalBody {
+    padding: 10px 12px;
+  }
+}

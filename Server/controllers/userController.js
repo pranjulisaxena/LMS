@@ -46,6 +46,10 @@ export const purchaseCourse = async (req, res) =>{
             return res.json({success: false, message: 'Data Not found'})
         }
 
+        if (userData.enrolledCourses.includes(courseId)) {
+            return res.json({success: false, message: 'Already enrolled in this course'})
+        }
+
         const purchaseData = {
             courseId: courseData._id,
             userId,
@@ -161,6 +165,8 @@ export const addUserRating = async (req, res) =>{
         }else{
             course.courseRatings.push({userId, rating});
         }
+
+        await course.save();
 
         return res.json({success: true, message: 'Rating added'})
 

@@ -132,7 +132,7 @@ const Player = () => {
                             {lecture.lectureUrl && <p className={style.preview} onClick={() => setplayerData({
                               ...lecture, chapter: index + 1, lecture: i + 1
                             })}>Watch</p> }
-                            <p>{humanizeDuration(lecture.lectureDuration * 60 * 1000, {units: ["h", "m"]})}</p>
+                            <p>{humanizeDuration(Number(lecture.lectureDuration) * 60 * 1000, {units: ["h", "m"]})}</p>
                           </div>
                         </div>
                       </li>

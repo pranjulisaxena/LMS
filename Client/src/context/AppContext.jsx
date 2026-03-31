@@ -78,7 +78,7 @@ export const AppContextProvider = (props) =>{
 
     const calculateChapterTime = (chapter) =>{
         let time = 0
-        chapter.chapterContent.map((lecture)=> time += lecture.lectureDuration)
+        chapter.chapterContent.map((lecture)=> time += Number(lecture.lectureDuration))
         return humanizeDuration(time * 60 * 1000, {units: ["h", "m"]})
     }
 
@@ -86,7 +86,7 @@ export const AppContextProvider = (props) =>{
     const calculateCourseDuration = (course) =>{
         let time = 0
 
-        course.courseContent.map((chapter) => chapter.chapterContent.map((lecture) => time += lecture.lectureDuration))
+        course.courseContent.map((chapter) => chapter.chapterContent.map((lecture) => time += Number(lecture.lectureDuration)))
         return humanizeDuration(time * 60 * 1000, {units: ["h", "m"]})
     }
 
@@ -142,6 +142,7 @@ export const AppContextProvider = (props) =>{
         navigate,
         calculateRating,
         isEducator,
+        setIsEducator,
         calculateChapterTime,
         calculateCourseDuration,
         calculateNoOfLectures,

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { AppContext } from '../../context/AppContext'
-import Loading from '../../components/student/Loading'
+import Loading from '../../components/educator/Loading'
 import style from '../educator/CSS/MyCourses.module.css'
 import { toast } from 'react-toastify'
 import axios from 'axios'

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { dummyStudentEnrolled } from '../../assets/assets'
-import Loading from '../../components/student/Loading'
+import Loading from '../../components/educator/Loading'
 import style from '../educator/CSS/StudentsEnrolled.module.css'
 import { AppContext } from '../../context/AppContext'
 import axios from 'axios'

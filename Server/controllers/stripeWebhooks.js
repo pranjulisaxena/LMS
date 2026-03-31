@@ -34,14 +34,26 @@ export const stripeWebhooks = async (request, response) =>{
 
 
         const purchaseData = await Purchase.findById(purchaseId)
+        
+        // Check if purchase is already completed to prevent duplicates
+        if (purchaseData.status === 'completed') {
+            return response.json({success: true, message: 'Purchase already processed'})
+        }
+
         const userData = await User.findById(purchaseData.userId)
         const courseData = await Course.findById(purchaseData.courseId.toString())
 
-        courseData.enrolledStudents.push(userData)
-        await courseData.save()
+        // Add to enrolledStudents if not already enrolled
+        if (!courseData.enrolledStudents.includes(userData._id)) {
+            courseData.enrolledStudents.push(userData._id)
+            await courseData.save()
+        }
         
-        userData.enrolledCourses.push(courseData._id)
-        await userData.save()
+        // Add to user's enrolledCourses if not already enrolled
+        if (!userData.enrolledCourses.includes(courseData._id)) {
+            userData.enrolledCourses.push(courseData._id)
+            await userData.save()
+        }
 
         purchaseData.status = 'completed'
         await purchaseData.save()

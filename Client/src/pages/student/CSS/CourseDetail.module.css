@@ -288,3 +288,260 @@ color: rgb(74, 74, 74);
     width: 100%;
     aspect-ratio: 16 / 9;
 }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .parent {
+        padding: 4vw 4vw;
+        gap: 3vw;
+    }
+
+    .leftParent {
+        max-width: 45vw;
+    }
+
+    .leftParent h1 {
+        font-size: 2.8vw;
+    }
+
+    .leftParentP {
+        font-size: 1.2vw;
+    }
+
+    .educator {
+        font-size: 1.2vw;
+    }
+
+    .chaptersParent h2 {
+        font-size: 2.7vw;
+    }
+
+    .rightColumnParent {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 800px){
+    .desc h3{
+        font-size: 2.5vw;
+    }
+}
+
+
+
+@media (max-width: 500px) {
+    .parent {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 3vw 5vw;
+        gap: 8vh;
+    }
+
+    .leftParent {
+        max-width: 90%;
+        order: 2;
+    }
+
+    .leftParent h1 {
+        font-size: 4vw;
+    }
+
+    .leftParentP {
+        font-size: 2.5vw;
+    }
+
+    .educator {
+        font-size: 2.5vw;
+    }
+
+    .chaptersParent h2 {
+        font-size: 3.5vw;
+    }
+
+    .contentFix {
+        padding: 2vh 2vw;
+    }
+
+    .div3 p {
+        font-size: 2.5vw;
+    }
+
+    .time {
+        font-size: 2.5vw;
+    }
+
+    .play_icon {
+        height: 4vh;
+        width: 3vw;
+    }
+
+    .motion ul {
+        padding: 2vw 2.5vw;
+        font-size: 2.5vw;
+    }
+
+    .desc h3 {
+        font-size: 3vw;
+    }
+
+    .desc p {
+        font-size: 2.5vh;
+    }
+
+    .rightColumnParent {
+        max-width: 90%;
+        order: 1;
+        margin-top: 3vh;
+    }
+
+    .rightDiv {
+        padding: 0 3vw;
+    }
+
+    .p1 {
+        font-size: 3vw;
+    }
+
+    .p2, .p3 {
+        font-size: 2.5vw;
+    }
+
+    .RightBottomDiv {
+        gap: 3vw;
+    }
+
+    .EnrollBtn {
+        margin-top: 3vh;
+        padding: 3vh 0;
+    }
+
+    .AboutCourseContainer p {
+        font-size: 2.8vw;
+    }
+
+    .AboutCourseContainer ul {
+        font-size: 2.5vw;
+        margin-left: 3vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .parent {
+        padding: 2vw 1vw;
+        gap: 8vh;
+    }
+
+    .leftParent h1 {
+        font-size: 5vw;
+    }
+
+    .leftParentP {
+        font-size: 3.5vw;
+    }
+
+    .educator {
+        font-size: 3.5vw;
+    }
+
+    .starsContainer {
+        gap: 1vw;
+    }
+
+    .chaptersParent h2 {
+        font-size: 4.5vw;
+    }
+
+    .contentFix {
+        padding: 2vh 1vw;
+    }
+
+    .div3 {
+        gap: 3vw;
+    }
+
+    .div3 p {
+        font-size: 3.5vw;
+    }
+
+    .time {
+        font-size: 3.5vw;
+    }
+
+    .play_icon {
+        height: 5vh;
+        width: 4vw;
+    }
+
+    .motion ul {
+        padding: 2vw 3vw;
+        font-size: 3.5vw;
+    }
+
+    .motion li {
+        gap: 2vw;
+        padding: 1.5vh 0;
+    }
+
+    .desc {
+        padding-top: 8vh;
+    }
+
+    .desc h3 {
+        font-size: 4vw;
+    }
+
+    .desc p {
+        font-size: 3vh;
+    }
+
+    .rightDiv {
+        padding: 0 2vw;
+        padding-top: 2vh;
+    }
+
+    .Rightimg {
+        width: 2vw;
+    }
+
+    .rightDiv2 {
+        gap: 1.5vw;
+    }
+
+    .currencyDiv {
+        gap: 2vw;
+    }
+
+    .p1 {
+        font-size: 4vw;
+    }
+
+    .p2, .p3 {
+        font-size: 3.5vw;
+    }
+
+    .RightBottomDiv {
+        gap: 4vw;
+        padding-top: 2vh;
+    }
+
+    .EnrollBtn {
+        margin-top: 3vh;
+        padding: 3.5vh 0;
+        font-size: 4vw;
+    }
+
+    .AboutCourseContainer {
+        padding-top: 3vh;
+    }
+
+    .AboutCourseContainer p {
+        font-size: 3.8vw;
+    }
+
+    .AboutCourseContainer ul {
+        font-size: 3.5vw;
+        margin-left: 4vw;
+        padding-top: 1.5vh;
+    }
+}

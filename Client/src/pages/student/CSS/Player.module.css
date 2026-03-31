@@ -24,6 +24,8 @@ font-weight: 600;
 
 .rightParent{
 margin-top: 5vh;
+width: 35vw;
+height: 60vh;
 }
 
 .playerDiv{
@@ -31,17 +33,42 @@ margin-top: 5vh;
     justify-content: space-between;
     align-items: center;
     margin-top: 1vh;
+    width: 100%;
+    
+}
+
+.iframeClass{
+    width: 100%;
+    height: 80%;
 }
 
 .thumbnail{
    width: 100%;
-   height: 120%;
+   height: 100%;
 }
 
-.rightBtn{
-    color: royalblue;
-    border: none;
-    
+.playerDiv p {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  flex: 1;
+}
+
+/* Button */
+.rightBtn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #4f46e5;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.rightBtn:hover {
+  background: #4338ca;
+  transform: translateY(-1px);
 }
 
 .RateCourseDiv{
@@ -55,4 +82,129 @@ margin-top: 5vh;
 .RateCourseDiv h1{
     font-size: 1.4vw;
     font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .parentDiv {
+        width: 100vw;
+        grid-template-columns: 1fr;
+        padding: 5vh 3vw;
+        gap: 3vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .leftDivParent {
+        width: 100%;
+        text-align: center;
+    }
+
+    .leftDivParent h2 {
+        font-size: 3vw;
+    }
+
+    .rightParent {
+        width: 90vw;
+        height: auto;
+        min-height: 80vh;
+    }
+
+    .RateCourseDiv h1 {
+        font-size: 2vw;
+    }
+
+    .playerDiv p {
+        font-size: 14px;
+    }
+
+    .rightBtn {
+        font-size: 13px;
+        padding: 7px 12px;
+    }
+
+    .leftDivParent p{
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .parentDiv {
+        padding: 3vh 2vw;
+        gap: 2vh;
+    }
+
+    .leftDivParent h2 {
+        font-size: 5vw;
+    }
+
+    .rightParent {
+        margin-top: 3vh;
+        height: auto;
+        max-height: 60vh;
+    }
+
+    .playerDiv {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1vh;
+    }
+
+    .playerDiv p {
+        font-size: 13px;
+    }
+
+    .rightBtn {
+        width: 100%;
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .RateCourseDiv {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1vh;
+        margin-top: 5vh;
+    }
+
+    .RateCourseDiv h1 {
+        font-size: 4vw;
+    }
+
+    .leftDivParent p{
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .parentDiv {
+        padding: 2vh 1vw;
+    }
+
+    .leftDivParent p{
+        font-size: 2.6vw;
+    }
+    .leftDivParent h2 {
+        font-size: 5vw;
+    }
+
+    .rightParent {
+        margin-top: 2vh;
+        max-height: 50vh;
+    }
+
+    .playerDiv p {
+        font-size: 12px;
+    }
+
+    .rightBtn {
+        font-size: 11px;
+        padding: 5px 8px;
+    }
+
+    .RateCourseDiv h1 {
+        font-size: 5vw;
+    }
 }

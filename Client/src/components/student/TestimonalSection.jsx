@@ -1,7 +1,10 @@
+import { useState } from 'react'
 import { assets, dummyTestimonial } from '../../assets/assets'
 import styles from './CSS/TestimonalSection.module.css'
+import TestimonialModal from './TestimonialModal'
 
 const TestimonalSection = () => {
+    const [selectedTestimonial, setSelectedTestimonial] = useState(null)
   return (
     <div className={styles.div}>
       <h2>Testimonals</h2>
@@ -27,10 +30,15 @@ const TestimonalSection = () => {
            </div>
             <p className={styles.feedback}>{testimonial.feedback}</p>
           </div>
-          <a href="#" className={styles.readMore}>Read More</a>
+          <a href="#" className={styles.readMore} onClick={() => setSelectedTestimonial(testimonial)}>Read More</a>
           </div>
       ))}
     </div>
+     <TestimonialModal
+        isOpen={!!selectedTestimonial}
+        testimonial={selectedTestimonial}
+        onClose={() => setSelectedTestimonial(null)}
+      />
     </div>
   )
 }

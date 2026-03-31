@@ -46,6 +46,15 @@ const CoursesList = () => {
       {
         filteredCourse.map((course,i) => <CoursesCard key={i} course={course}/>)
       }
+      {
+        filteredCourse.map((course,i) => <CoursesCard key={i} course={course}/>)
+      }
+      {
+        filteredCourse.map((course,i) => <CoursesCard key={i} course={course}/>)
+      }
+      {
+        filteredCourse.map((course,i) => <CoursesCard key={i} course={course}/>)
+      }
       </div>
     </div>
     </>
