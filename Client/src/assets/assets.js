@@ -107,21 +107,21 @@ export const dummyTestimonial = [
         role: 'SWE 1 @ Amazon',
         image: assets.profile_img_1,
         rating: 5,
-        feedback: 'I\'ve been using Imagify for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.',
+        feedback: 'This LMS gave me the confidence to start learning from scratch. The structured courses and real-world projects made everything easy to understand.',
     },
     {
         name: 'Richard Nelson',
         role: 'SWE 2 @ Samsung',
         image: assets.profile_img_2,
         rating: 4,
-        feedback: 'I\'ve been using Imagify for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.',
+        feedback: 'As someone switching careers, this LMS gave me the confidence to start from scratch. The step-by-step approach and real-world projects helped me build a strong foundation in tech.',
     },
     {
         name: 'James Washington',
         role: 'SWE 2 @ Google',
         image: assets.profile_img_3,
         rating: 4.5,
-        feedback: 'I\'ve been using Imagify for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.',
+        feedback: 'The step-by-step teaching approach helped me build strong fundamentals. I finally feel confident applying my skills in real projects.',
     },
 ];
 
@@ -301,16 +301,16 @@ export const dummyCourses = [
                     {
                         "lectureId": " lecture1",
                         "lectureTitle": "Lists and Tuples",
-                        "lectureDuration": 720,
-                        "lectureUrl": "https://youtu.be/HdLIMoQkXFA",
+                        "lectureDuration": 41,
+                        "lectureUrl": "https://youtu.be/qVyvmzFxF_o",
                         "isPreviewFree": true,
                         "lectureOrder": 1
                     },
                     {
                         "lectureId": "lecture2",
                         "lectureTitle": "Dictionaries and Sets",
-                        "lectureDuration": 850,
-                        "lectureUrl": "https://youtu.be/HdLIMoQkXFA",
+                        "lectureDuration": 54,
+                        "lectureUrl": "https://youtu.be/078tYSD7K8E",
                         "isPreviewFree": false,
                         "lectureOrder": 2
                     }
@@ -324,19 +324,12 @@ export const dummyCourses = [
                     {
                         "lectureId": "lecture3",
                         "lectureTitle": "Classes and Objects",
-                        "lectureDuration": 900,
-                        "lectureUrl": "https://youtu.be/HdLIMoQkXFA",
+                        "lectureDuration": 60,
+                        "lectureUrl": "https://youtu.be/HeW-D6KpDwY",
                         "isPreviewFree": true,
                         "lectureOrder": 1
                     },
-                    {
-                        "lectureId": "lecture4",
-                        "lectureTitle": "Inheritance and Polymorphism",
-                        "lectureDuration": 950,
-                        "lectureUrl": "https://youtu.be/HdLIMoQkXFA",
-                        "isPreviewFree": false,
-                        "lectureOrder": 2
-                    }
+
                 ]
             }
         ],
@@ -373,16 +366,16 @@ export const dummyCourses = [
                     {
                         "lectureId": "lecture1",
                         "lectureTitle": "What is Cybersecurity?",
-                        "lectureDuration": 10,
-                        "lectureUrl": "https://youtu.be/samplelink5",
+                        "lectureDuration": 7,
+                        "lectureUrl": "https://youtu.be/inWWhr5tnEA",
                         "isPreviewFree": true,
                         "lectureOrder": 1
                     },
                     {
                         "lectureId": "lecture2",
                         "lectureTitle": "Types of Cyber Threats",
-                        "lectureDuration": 18,
-                        "lectureUrl": "https://youtu.be/samplelink6",
+                        "lectureDuration": 11,
+                        "lectureUrl": "https://youtu.be/wKFOXuWoqmM",
                         "isPreviewFree": false,
                         "lectureOrder": 2
                     }
@@ -396,16 +389,16 @@ export const dummyCourses = [
                     {
                         "lectureId": "lecture3",
                         "lectureTitle": "Password Management",
-                        "lectureDuration": 15,
-                        "lectureUrl": "https://youtu.be/samplelink7",
+                        "lectureDuration": 7,
+                        "lectureUrl": "https://youtu.be/ugeLoJNjfPk",
                         "isPreviewFree": true,
                         "lectureOrder": 1
                     },
                     {
                         "lectureId": "lecture4",
                         "lectureTitle": "Network Security Essentials",
-                        "lectureDuration": 20,
-                        "lectureUrl": "https://youtu.be/samplelink8",
+                        "lectureDuration": 27,
+                        "lectureUrl": "https://youtu.be/KjN64N6-_Sk",
                         "isPreviewFree": false,
                         "lectureOrder": 2
                     }
@@ -439,16 +432,16 @@ export const dummyCourses = [
                     {
                         "lectureId": "lecture1",
                         "lectureTitle": "Introduction to HTML",
-                        "lectureDuration": 600,
-                        "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
+                        "lectureDuration": 126,
+                        "lectureUrl": "https://youtu.be/HcOc7P5BMi4",
                         "isPreviewFree": true,
                         "lectureOrder": 1
                     },
                     {
                         "lectureId": "lecture2",
                         "lectureTitle": "Styling with CSS",
-                        "lectureDuration": 720,
-                        "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
+                        "lectureDuration": 438,
+                        "lectureUrl": "https://youtu.be/ESnrn1kAD4E",
                         "isPreviewFree": false,
                         "lectureOrder": 2
                     }
@@ -462,19 +455,12 @@ export const dummyCourses = [
                     {
                         "lectureId": "lecture3",
                         "lectureTitle": "JavaScript Basics",
-                        "lectureDuration": 800,
-                        "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
+                        "lectureDuration": 707,
+                        "lectureUrl": "https://youtu.be/VlPiVmYuoqw",
                         "isPreviewFree": true,
                         "lectureOrder": 1
                     },
-                    {
-                        "lectureId": "lecture4",
-                        "lectureTitle": "DOM Manipulation",
-                        "lectureDuration": 850,
-                        "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
-                        "isPreviewFree": false,
-                        "lectureOrder": 2
-                    }
+
                 ]
             }
         ],

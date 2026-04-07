@@ -49,7 +49,7 @@ const StudentsEnrolled = () => {
                 {index + 1}
                 </td>
                 <td style={{padding: '3vh 2vw', display: 'flex', alignItems: 'center', rowGap: '2vw'}}>
-                  <img src={item.student.imageUrl} alt="" style={{width: '4vw', height: '8vh', borderRadius: '100%'}} />
+                  <img src={item.student.imageUrl} alt="" style={{width: '2rem', borderRadius: '100%'}} />
                   <span style={{overflow: 'hidden', wordWrap: 'nowrap',textOverflow: 'ellipsis', paddingLeft: '1vw'}}>{item.student.name}</span>
                 </td>
                 <td style={{padding: '3vh 2vw',overflow: 'hidden', wordWrap: 'nowrap',textOverflow: 'ellipsis', }}>{item.courseTitle}</td>

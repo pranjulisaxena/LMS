@@ -1,5 +1,8 @@
 import {Webhook} from 'svix'
 import User from '../models/User.js'
+import { Purchase } from "../models/Purchase.js";
+import Course from "../models/Course.js";
+import { CourseProgress } from "../models/CourseProgress.js";
 
 
 // API Controller Function to Manage Clerk User with database
@@ -22,7 +25,7 @@ try {
 
     switch (type) {
         case 'user.created': {
-            // console.log("user created event")
+    
             const userData = {
                 _id: data.id,
                 email: data.email_addresses[0].email_address,
@@ -48,6 +51,35 @@ try {
 
         case 'user.deleted': {
             await User.findByIdAndDelete(data.id)
+
+            const userId = data.id
+
+            
+                // 3️⃣ Remove user from all courses
+                await Course.updateMany(
+                  { enrolledStudents: userId },
+                  { $pull: { enrolledStudents: userId } }
+                );
+            
+                // 4️⃣ Delete all purchases
+                await Purchase.deleteMany({ userId });
+            
+                // 5️⃣ Delete courses posted by the user
+                const coursesToDelete = await Course.find({ educator: userId });
+                for (const course of coursesToDelete) {
+                  // Remove course from all users' enrolledCourses
+                  await User.updateMany(
+                    { enrolledCourses: course._id },
+                    { $pull: { enrolledCourses: course._id } }
+                  );
+                  // Delete Course Progress
+                  await CourseProgress.deleteMany({ courseId: course._id });
+                  // Delete all purchases for this course
+                  await Purchase.deleteMany({ courseId: course._id });
+                  // Delete the course
+                  await Course.findByIdAndDelete(course._id);
+                }
+
             res.json({})
             break;
         }

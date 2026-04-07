@@ -117,3 +117,33 @@ overflow: hidden;
 white-space: nowrap;
 text-overflow: ellipsis;
 }
+
+
+/* Mobile specific overrides */
+@media (max-width: 768px) {
+   .componentDiv{
+    width: 30vw !important;
+      padding: 2.5vh 1.8vw;
+   }
+
+   .FlexDiv{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3vw;
+}
+
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    .componentDiv{
+    width: 30vw !important;
+      padding: 2vh 1.8vw;
+   }
+
+   .componentDiv img{
+    width: 9vw;
+   }
+
+}

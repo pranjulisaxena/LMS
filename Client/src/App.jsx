@@ -16,6 +16,9 @@ import Navbar from './components/student/Navbar.jsx'
 import "quill/dist/quill.snow.css";
 import { ToastContainer } from 'react-toastify';
 import About from './pages/student/About.jsx'
+import BecomeEducator from './pages/educator/becomeEducator.jsx'
+import PrivacyPolicy from './pages/student/PrivacyPolicy.jsx'
+import ContactUs from './pages/student/ContactUs.jsx'
 
 
 const App = () => {
@@ -38,6 +41,9 @@ const App = () => {
         <Route path='/my-enrollments' element={<MyEnrollments/>} />
         <Route path='/player/:courseId' element={<Player/>} />
         <Route path='/loading/:path' element={<Loading/>} />
+        <Route path='/privacy-policy' element={<PrivacyPolicy />} />
+        <Route path='/contact-us' element={<ContactUs />} />
+        <Route path='/become-educator' element={<BecomeEducator />} />
         <Route path='/about' element={<About/>} />
 
         <Route path='/educator' element={<Educator/>} >

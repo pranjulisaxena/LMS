@@ -23,7 +23,23 @@ export const deleteUser = async (req, res) => {
     // 4️⃣ Delete all purchases
     await Purchase.deleteMany({ userId });
 
-    res.json({ success: true, message: "User deleted everywhere" });
+    // 5️⃣ Delete courses posted by the user
+    const coursesToDelete = await Course.find({ educator: userId });
+    for (const course of coursesToDelete) {
+      // Remove course from all users' enrolledCourses
+      await User.updateMany(
+        { enrolledCourses: course._id },
+        { $pull: { enrolledCourses: course._id } }
+      );
+      // Delete Course Progress
+      await CourseProgress.deleteMany({ courseId: course._id });
+      // Delete all purchases for this course
+      await Purchase.deleteMany({ courseId: course._id });
+      // Delete the course
+      await Course.findByIdAndDelete(course._id);
+    }
+
+    res.json({ success: true, message: "User and their courses deleted everywhere" });
 
   } catch (error) {
     res.json({ success: false, message: error.message });

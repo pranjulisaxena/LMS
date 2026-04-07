@@ -19,26 +19,56 @@ const Navbar = () => {
   const { openSignIn } = useClerk();
   const { user } = useUser();
 
-  const becomeEducator = async () =>{
-    try {
-      if(isEducator){
-        navigate('/educator')
-        return;
-      }
-      const token = await getToken()
-      const {data} = await axios.get(backendUrl + '/api/educator/update-role', {headers: {Authorization: `Bearer ${token}`}})
+  // const becomeEducator = async () =>{
+  //   try {
+  //     if(isEducator){
+  //       navigate('/educator')
+  //       return;
+  //     }
+  //     const token = await getToken()
+  //     const {data} = await axios.post(backendUrl + '/api/educator/request-role', {}, {headers: {Authorization: `Bearer ${token}`}})
 
-      if(data.success){
-        setIsEducator(true)
-        toast.success(data.message)
-      }
-      else{
-        toast.error(data.message)
-      }
-    } catch (error) {
-      toast.error(error.message)
+  //     if(data.success){
+  //       setIsEducator(true)
+  //       toast.success(data.message)
+  //     }
+  //     else{
+  //       toast.error(data.message)
+  //     }
+  //   } catch (error) {
+  //     toast.error(error.message)
+  //   }
+  // }
+
+  const becomeEducator = async () => {
+  try {
+    if (isEducator) {
+      navigate('/educator');
+      return;
     }
+
+    // const token = await getToken();
+
+    // const { data } = await axios.post(
+    //   backendUrl + '/api/educator/request-role',
+    //   {},
+    //   {
+    //     headers: { Authorization: `Bearer ${token}` }
+    //   }
+    // );
+
+    navigate('/become-educator');
+
+    // if (data.success) {
+    //   toast.success("Request sent to admin");
+    // } else {
+    //   toast.error(data.message);
+    // }
+
+  } catch (error) {
+    toast.error(error.message);
   }
+};
 
   return (
     <div className={`${styles.navbar} ${isCourseListPage ? styles.courseListNavbar : ''}`}>

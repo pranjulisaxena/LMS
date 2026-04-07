@@ -103,6 +103,8 @@ const AddCourse = () => {
         toast.error('Thumbnail Not Selected')
       }
 
+      toast.info('Adding Course...');
+
       const courseData = {
         courseTitle,
         courseDescription: quillRef.current.root.innerHTML,

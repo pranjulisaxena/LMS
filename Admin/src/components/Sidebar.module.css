@@ -1,7 +1,8 @@
 /* Sidebar container */
 .sidebar {
   width: 240px;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   background: linear-gradient(180deg, #1e293b, #0f172a);
   color: white;
 
@@ -75,3 +76,4 @@
   background: #1d4ed8;
   box-shadow: 0 4px 10px rgba(29, 78, 216, 0.4);
 }
+

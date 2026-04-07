@@ -44,6 +44,22 @@ export default function Sidebar() {
         >
           📈 activity
         </Link>
+        <Link
+          to="/requests"
+          className={`${styles.link} ${
+            location.pathname === "/request" ? styles.active : ""
+          }`}
+        >
+          👨‍🎓 requests
+        </Link>
+        <Link
+          to="/profile"
+          className={`${styles.link} ${
+            location.pathname === "/profile" ? styles.active : ""
+          }`}
+        >
+          👨 profile
+        </Link>
       </nav>
       </div>
 

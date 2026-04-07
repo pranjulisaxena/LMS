@@ -1,0 +1,490 @@
+/* PrivacyPolicy.module.css */
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0c29 0%, #1a1a3e 50%, #24243e 100%);
+  position: relative;
+  overflow-x: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Animated Background Orbs */
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.gradientOrb1 {
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.3), transparent 70%);
+  border-radius: 50%;
+  animation: floatOrb 20s ease-in-out infinite;
+  filter: blur(60px);
+}
+
+.gradientOrb2 {
+  position: absolute;
+  bottom: -10%;
+  left: -10%;
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.3), transparent 70%);
+  border-radius: 50%;
+  animation: floatOrb 25s ease-in-out infinite reverse;
+  filter: blur(60px);
+}
+
+.gradientOrb3 {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  width: 40%;
+  height: 40%;
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.2), transparent 70%);
+  border-radius: 50%;
+  animation: floatOrb 18s ease-in-out infinite;
+  filter: blur(80px);
+}
+
+@keyframes floatOrb {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -30px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  z-index: 2;
+  padding: 120px 24px 60px;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(15, 12, 41, 0.8) 0%, rgba(26, 26, 62, 0) 100%);
+}
+
+.heroContent {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.heroBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 8px 20px;
+  border-radius: 100px;
+  font-size: 0.875rem;
+  color: #a78bfa;
+  margin-bottom: 24px;
+  animation: fadeInUp 0.6s ease-out;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.badgeIcon {
+  font-size: 1.1rem;
+}
+
+.heroTitle {
+  font-size: 4rem;
+  font-weight: 800;
+  margin: 0 0 24px;
+  color: white;
+  letter-spacing: -0.02em;
+  animation: fadeInUp 0.6s ease-out 0.1s both;
+}
+
+.gradientText {
+  background: linear-gradient(135deg, #a78bfa, #60a5fa, #f472b6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.heroDescription {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+  max-width: 700px;
+  margin: 0 auto 32px;
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.heroActions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeInUp 0.6s ease-out 0.3s both;
+}
+
+.btnPrimary, .btnSecondary {
+  padding: 12px 28px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-size: 0.95rem;
+}
+
+.btnPrimary {
+  background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+  color: white;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
+}
+
+.btnSecondary {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btnSecondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Main Grid Layout */
+.mainGrid {
+  position: relative;
+  z-index: 2;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 48px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.sidebarCard {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 24px;
+  margin-bottom: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.sidebarCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+.sidebarTitle {
+  color: white;
+  font-size: 1.2rem;
+  margin: 0 0 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid rgba(139, 92, 246, 0.5);
+}
+
+.navMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: transparent;
+  border: none;
+  border-radius: 12px;
+  color: #cbd5e1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.navItem:hover {
+  background: rgba(139, 92, 246, 0.2);
+  color: white;
+  transform: translateX(4px);
+}
+
+.navItemActive {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.3), rgba(139, 92, 246, 0.1));
+  color: #a78bfa;
+  border-left: 3px solid #a78bfa;
+}
+
+.navIcon {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(139, 92, 246, 0.2);
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.contactCard {
+  text-align: center;
+}
+
+.contactIcon {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.contactCard h4 {
+  color: white;
+  margin: 0 0 8px;
+}
+
+.contactCard p {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  margin: 0 0 16px;
+}
+
+.contactBtn {
+  background: rgba(139, 92, 246, 0.2);
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #a78bfa;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contactBtn:hover {
+  background: rgba(139, 92, 246, 0.4);
+  color: white;
+}
+
+/* Content Sections */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.policySection {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: fadeInUp 0.5s ease-out backwards;
+}
+
+.policySection:hover {
+  transform: translateY(-4px);
+  border-color: rgba(139, 92, 246, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.sectionActive {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.2);
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.sectionIcon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+  border-radius: 16px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.sectionTitle {
+  color: white;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.sectionContent {
+  color: #e2e8f0;
+  line-height: 1.7;
+}
+
+.paragraph {
+  margin-bottom: 16px;
+}
+
+.bulletPoint {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+  padding-left: 8px;
+}
+
+.bulletIcon {
+  color: #a78bfa;
+  font-size: 1.1rem;
+  min-width: 20px;
+}
+
+/* Legal Footer */
+.legalFooter {
+  margin-top: 40px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 24px;
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.legalGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 32px;
+}
+
+.legalItem h4 {
+  color: #a78bfa;
+  margin: 0 0 12px;
+  font-size: 1rem;
+}
+
+.legalItem p {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Floating Action Button */
+.fab {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 100;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fab:hover {
+  transform: scale(1.1) translateY(-4px);
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.5);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .mainGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .sidebar {
+    position: static;
+  }
+  
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+  
+  .heroDescription {
+    font-size: 1rem;
+  }
+  
+  .policySection {
+    padding: 24px;
+  }
+  
+  .sectionTitle {
+    font-size: 1.4rem;
+  }
+  
+  .legalGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 80px 16px 40px;
+  }
+  
+  .heroTitle {
+    font-size: 2rem;
+  }
+  
+  .heroActions {
+    flex-direction: column;
+  }
+  
+  .btnPrimary, .btnSecondary {
+    width: 100%;
+  }
+  
+  .mainGrid {
+    padding: 20px 16px 60px;
+  }
+  
+  .sectionHeader {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .fab {
+    bottom: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+  }
+}

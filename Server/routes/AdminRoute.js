@@ -8,6 +8,7 @@ adminRouter.get('/allUsers', gettingAllUsers)
 adminRouter.get('/allPurchases', gettingAllPurchases)
 adminRouter.delete('/deleteUser/:userId', deleteUser)
 adminRouter.put('/updateCourse/:courseId', updateCourse) 
+adminRouter.delete('/deleteCourse/:courseId', deletingCourse)
 adminRouter.get('/activity', getAdminActivity)
 
 export default adminRouter;

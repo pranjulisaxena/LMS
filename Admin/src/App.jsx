@@ -11,10 +11,11 @@ import Sidebar from "./components/Sidebar";
 import { ToastContainer } from 'react-toastify';
 import Activity from "./pages/Activity";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Requests from "./pages/Requests";
+import AdminProfile from "./pages/AdminProfile";
 
 function App() {
 
-      console.log('hit')
   return (
     <>  
     <ToastContainer />
@@ -82,6 +83,30 @@ function App() {
               <div style={{ display: "flex" }}>
                 <Sidebar />
                 <Activity />
+              </div>
+              </ProtectedRoute>
+           
+          }
+        />
+        <Route
+          path="/requests"
+          element={
+              <ProtectedRoute>
+              <div style={{ display: "flex" }}>
+                <Sidebar />
+                <Requests />
+              </div>
+              </ProtectedRoute>
+           
+          }
+        />
+        <Route
+          path="/profile"
+          element={
+              <ProtectedRoute>
+              <div style={{ display: "flex" }}>
+                <Sidebar />
+                <AdminProfile />
               </div>
               </ProtectedRoute>
            

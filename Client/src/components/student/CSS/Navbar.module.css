@@ -1,5 +1,5 @@
 .navbar{
-    background: linear-gradient(to left, #ABB6EC,#A7D6ED ) ;
+    background: linear-gradient(to left, #ccd4fc,#A7D6ED ) ;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -57,6 +57,7 @@
 .courseListNavbar{
     background: white;
 }
+
 
 .login{
     display: flex;

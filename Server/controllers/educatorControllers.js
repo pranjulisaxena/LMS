@@ -4,6 +4,101 @@ import {v2 as cloudinary} from 'cloudinary'
 import { Purchase } from "../models/Purchase.js";
 import User from "../models/User.js";
 
+import EducatorRequest from "../models/EducatorRequest.js";
+// import { clerkClient } from "@clerk/express";
+
+
+// ✅ USER → Send request
+export const requestEducatorRole = async (req, res) => {
+  try {
+    const userId = req.auth().userId;
+
+    const { name, email, experience, skills, portfolio, image } = req.body;
+
+    const existing = await EducatorRequest.findOne({ userId });
+
+    if (existing) {
+      return res.json({
+        success: false,
+        message: "Request already sent"
+      });
+    }
+
+    await EducatorRequest.create({
+      userId,
+      name,
+      email,
+      experience,
+      skills,
+      portfolio,
+      image
+    });
+
+    res.json({
+      success: true,
+      message: "Request submitted successfully"
+    });
+
+  } catch (error) {
+    res.json({ success: false, message: error.message });
+  }
+};
+
+
+// ✅ ADMIN → Get all requests
+export const getAllRequests = async (req, res) => {
+  try {
+    const requests = await EducatorRequest.find().sort({ createdAt: -1 });
+
+    res.json({ success: true, requests });
+
+  } catch (error) {
+    res.json({ success: false, message: error.message });
+  }
+};
+
+
+// ✅ ADMIN → Approve
+export const approveEducatorRole = async (req, res) => {
+  try {
+    const { requestId, userId } = req.body;
+
+    await EducatorRequest.findByIdAndUpdate(requestId, {
+      status: "approved"
+    });
+
+    // 🔥 Update Clerk Role
+    await clerkClient.users.updateUserMetadata(userId, {
+      publicMetadata: {
+        role: "educator"
+      }
+    });
+
+    res.json({ success: true, message: "Approved successfully" });
+
+  } catch (error) {
+    res.json({ success: false, message: error.message });
+  }
+};
+
+
+// ✅ ADMIN → Reject
+export const rejectEducatorRole = async (req, res) => {
+  try {
+    const { requestId } = req.body;
+
+    await EducatorRequest.findByIdAndUpdate(requestId, {
+      status: "rejected"
+    });
+
+    res.json({ success: true, message: "Rejected" });
+
+  } catch (error) {
+    res.json({ success: false, message: error.message });
+  }
+};
+
+
 
 // Update role to educator
 export const updateRoleToEducator = async (req, res) =>{

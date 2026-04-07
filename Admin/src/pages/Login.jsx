@@ -15,7 +15,7 @@ export default function Login() {
     console.log(form)
     if(form.name === 'Pranjuli' && form.password === "admin@123"){
       console.log('Hit')
-      const {token} = await getToken();
+      const token = "444444"
       localStorage.setItem("adminToken", token);
 
     navigate("/dashboard");
@@ -43,7 +43,7 @@ export default function Login() {
           onChange={(e) => setForm({ ...form, password: e.target.value })}
         />
 
-        <button className={styles.button}>Login</button>
+        <button className={styles.button} onClick={handleSubmit}>Login</button>
       </form>
     </div>
   );
