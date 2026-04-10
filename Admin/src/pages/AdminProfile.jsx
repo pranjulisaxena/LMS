@@ -1,47 +1,58 @@
 // AdminProfile.jsx
 import React, { useState } from 'react';
 import styles from './AdminProfile.module.css';
+import axios from "axios";
+import { useEffect } from "react";
 
 const AdminProfile = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [activeSection, setActiveSection] = useState('personal');
-  const [admin, setAdmin] = useState({
-    personal: {
-      firstName: "Pranjuli",
-      lastName: "Saxena",
-      email: "pranjulisaxena3@gmail.com",
-      phone: "+91 98765-43210",
-      location: "Uttar Pradesh, India",
-      title: "Software Developer",
-      department: "IT Infrastructure",
-      employeeId: "EMP-8842",
-      joinDate: "March 15, 2026",
-      timezone: "PST (UTC-8)"
-    },
-    professional: {
-      role: "Lead Administrator",
-      experience: "8+ years",
-      projects: 24,
-      certificates: ["AWS Certified", "Azure Expert", "Security+"]
-    },
-    security: {
-      twoFactor: true,
-      lastLogin: "2026-04-15 09:30 AM",
-      devices: ["Chrome on Windows", "Safari on iOS"]
-    }
-  });
+  const [admin, setAdmin] = useState(null);
 
-  const [formData, setFormData] = useState({ ...admin.personal });
+  const [formData, setFormData] = useState({});
+
+  const handleSave = async (e) => {
+  e.preventDefault();
+
+  try {
+    const updatedData = {
+      _id: admin._id,
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      email: formData.email,
+      phone: formData.phone,
+      location: formData.location,
+      jobTitle: formData.title
+    };
+
+    const res = await axios.put(
+      "http://localhost:5000/api/admin/update-adminData",
+      updatedData
+    );
+
+    if (res.data.success) {
+      alert("Profile updated successfully");
+
+      // Update UI
+      setAdmin({
+        ...admin,
+        personal: {
+          ...admin.personal,
+          ...formData
+        }
+      });
+
+      setIsEditing(false);
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSave = (e) => {
-    e.preventDefault();
-    setAdmin({ ...admin, personal: formData });
-    setIsEditing(false);
-  };
 
   const handleToggleChange = (e) => {
     setAdmin({ ...admin, security: { ...admin.security, twoFactor: e.target.checked } });
@@ -54,7 +65,60 @@ const AdminProfile = () => {
     { id: 'security', label: 'Security', icon: '🔒' }
   ];
 
-  return (
+  useEffect(() => {
+  const fetchAdmin = async () => {
+    try {
+      const res = await axios.get("http://localhost:5000/api/admin/get-adminData");
+
+      if (res.data.success) {
+        const data = res.data.admin;
+
+        // Convert DB structure → your UI structure
+        setAdmin({
+          _id: data._id,
+          personal: {
+            firstName: data.firstName,
+            lastName: data.lastName,
+            email: data.email,
+            phone: data.phone,
+            location: data.location,
+            title: data.jobTitle,
+            department: "IT Infrastructure",
+            employeeId: "EMP-8842",
+            joinDate: "March 15, 2026",
+            timezone: "PST (UTC-8)"
+          },
+          professional: {
+            role: "Lead Administrator",
+            experience: "8+ years",
+            projects: 24,
+            certificates: ["AWS Certified", "Azure Expert", "Security+"]
+          },
+          security: {
+            twoFactor: true,
+            lastLogin: "2026-04-15 09:30 AM",
+            devices: ["Chrome on Windows", "Safari on iOS"]
+          }
+        });
+
+        setFormData({
+          firstName: data.firstName,
+          lastName: data.lastName,
+          email: data.email,
+          phone: data.phone,
+          location: data.location,
+          title: data.jobTitle
+        });
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  fetchAdmin();
+}, []);
+
+  return admin ? (
     <div className={styles.container}>
       <div className={styles.profilePanel}>
         {/* Header Section */}
@@ -329,7 +393,7 @@ const AdminProfile = () => {
         </div>
       </div>
     </div>
-  );
+  ) : <h1>Loading...</h1>
 };
 
 export default AdminProfile;

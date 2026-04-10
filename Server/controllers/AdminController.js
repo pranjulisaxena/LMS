@@ -3,6 +3,7 @@ import { Purchase } from "../models/Purchase.js";
 import Course from "../models/Course.js";
 import { clerkClient } from "@clerk/express";
 import { CourseProgress } from "../models/CourseProgress.js";
+import Admin from "../models/Admin.js";
 
 export const deleteUser = async (req, res) => {
   try {
@@ -166,3 +167,31 @@ export const getAdminActivity = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+
+// getAdmin Data (for dashboard stats)
+export const getAdminData = async (req, res) => {
+  try {
+    const admin = await Admin.findOne();
+  res.json({ success: true, admin: admin });
+  } catch (error) {
+    res.json({ success: false, message: error.message });
+  }
+}
+
+// updateAdminData 
+
+export const updateAdminData = async (req, res) => {
+  try {
+    const updates = req.body;
+
+    const updatedAdmin = await Admin.findByIdAndUpdate(updates._id, updates, { new: true });
+
+    if (!updatedAdmin) {
+      return res.json({ success: false, message: "Admin not found" });
+    }
+
+    res.json({ success: true, admin: updatedAdmin });
+  } catch (error) {
+    res.json({ success: false, message: error.message });
+  }
+}

@@ -629,16 +629,16 @@ export const dummyCourses = [
                     {
                         "lectureId": "lecture1",
                         "lectureTitle": "What is Data Science?",
-                        "lectureDuration": 600,
-                        "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
+                        "lectureDuration": 710,
+                        "lectureUrl": "https://youtu.be/xPh5ihBWang",
                         "isPreviewFree": true,
                         "lectureOrder": 1
                     },
                     {
                         "lectureId": "lecture2",
                         "lectureTitle": "Data Collection and Cleaning",
-                        "lectureDuration": 720,
-                        "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
+                        "lectureDuration": 209,
+                        "lectureUrl": "https://youtu.be/ITy8R4278sk",
                         "isPreviewFree": false,
                         "lectureOrder": 2
                     }
@@ -652,16 +652,16 @@ export const dummyCourses = [
                     {
                         "lectureId": "lecture3",
                         "lectureTitle": "Supervised vs Unsupervised Learning",
-                        "lectureDuration": 800,
-                        "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
+                        "lectureDuration": 7,
+                        "lectureUrl": "https://youtu.be/fM8XdC1EweU",
                         "isPreviewFree": true,
                         "lectureOrder": 1
                     },
                     {
                         "lectureId": "lecture4",
                         "lectureTitle": "Building Your First Model",
-                        "lectureDuration": 850,
-                        "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
+                        "lectureDuration": 197,
+                        "lectureUrl": "https://youtu.be/UU1WVnMk4E8&t=11874s",
                         "isPreviewFree": false,
                         "lectureOrder": 2
                     }
